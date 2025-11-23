@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+import logoImage from '/images/logo_horizontal.png';
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +35,7 @@ const Header = () => {
       <div className="container header-container">
         <div className="logo">
           <Link to="/">
-            <img src="/images/logo_horizontal.png" alt="鈴木歯科医院 Suzuki Dental Clinic" className="logo-image" />
+            <img src={logoImage} alt="鈴木歯科医院 Suzuki Dental Clinic" className="logo-image" />
           </Link>
         </div>
 
