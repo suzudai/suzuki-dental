@@ -2,7 +2,7 @@
   "name": "temp-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://suzudai.github.io/suzuki-dental-clinic",
+  "homepage": "https://suzudai.github.io/suzuki-dental",
   "type": "module",
   "scripts": {
     "dev": "vite",
