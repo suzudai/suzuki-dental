@@ -210,31 +210,6 @@ ul {
   }
 }
 
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.9rem;
-}
-}
-
 /* Organic Shape Utilities */
 .blob-shape {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
