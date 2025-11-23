@@ -6,11 +6,12 @@
 }
 
 .service-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 60px 0 100px;
-    /* Extra padding at bottom for wave */
+    background: linear-gradient(135deg, var(--color-ocean-light) 0%, #fff 100%);
+    color: var(--color-ocean-deep);
+    padding: 30px 0 20px;
     text-align: center;
+    border-bottom: 2px dashed var(--color-ocean-medium);
+    border-radius: 0 0 50% 50% / 0 0 20px 20px;
     position: relative;
 }
 
@@ -23,10 +24,11 @@
 .breadcrumb {
     font-size: 0.9rem;
     opacity: 0.9;
+    color: var(--color-ocean-medium);
 }
 
 .breadcrumb a {
-    color: white;
+    color: var(--color-ocean-medium);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;

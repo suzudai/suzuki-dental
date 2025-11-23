@@ -3,19 +3,22 @@ import { Link } from 'react-router-dom';
 import WaveDivider from './WaveDivider';
 import './ServicePageLayout.css';
 
-const ServicePageLayout = ({ title, children }) => {
+const ServicePageLayout = ({ title, subtitle, children }) => {
+
     return (
+
         <div className="service-page">
+
             <div className="service-hero">
+
                 <div className="container">
+
                     <h1 className="service-hero-title fade-in-up">{title}</h1>
-                    <div className="breadcrumb fade-in-up delay-1">
-                        <Link to="/">ホーム</Link> &gt; <Link to="/services">診療案内</Link> &gt; <span>{title}</span>
-                    </div>
+
+                    <p>{subtitle}</p>
+
                 </div>
-                <div className="hero-wave">
-                    <WaveDivider isBottom={true} />
-                </div>
+
             </div>
 
             <div className="service-content-wrapper">

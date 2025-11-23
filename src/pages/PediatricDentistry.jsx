@@ -5,7 +5,7 @@ import { FaChild, FaSmile, FaShieldAlt } from 'react-icons/fa';
 
 const PediatricDentistry = () => {
     return (
-        <ServicePageLayout title="小児歯科">
+        <ServicePageLayout title="小児歯科" subtitle="Pediatric Dentistry">
             <div className="service-detail-section">
                 <h2>お子様の歯を守るために</h2>
                 <p>

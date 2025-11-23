@@ -135,37 +135,104 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 15px;
-    /* Reduced padding on mobile */
+
+  /* Existing rules ... */
+  .page-header h1 {
+    font-size: 1.3rem;
+    /* smaller than previous */
   }
 
-  .section-title {
+  .hero-main-copy {
     font-size: 1.8rem;
-    /* Smaller section titles */
-    margin-bottom: 30px;
+    /* smaller main copy */
   }
 
-  .section-title::after {
-    margin-top: 10px;
-    width: 50px;
+  h1 {
+    font-size: 1.6rem;
   }
 
-  .page-header {
-    padding: 20px 0 10px;
-    /* 余白をさらに縮小 */
-    margin-bottom: 20px;
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 90%;
   }
 
   .page-header h1 {
-    font-size: 1.5rem;
-    /* タイトルを小さく */
+    font-size: 1.1rem;
   }
 
-  .page-header p {
-    font-size: 0.9rem;
-    /* サブテキストも小さく */
+  .hero-main-copy {
+    font-size: 1.6rem;
   }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+}
 }
 
 /* Organic Shape Utilities */
@@ -369,6 +436,21 @@ ul {
   margin: 15px auto 0;
   border-radius: 3px;
   opacity: 0.7;
+}
+
+/* Mobile responsive for section-title */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
 }
 
 .page-header p {

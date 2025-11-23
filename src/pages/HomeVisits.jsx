@@ -5,7 +5,7 @@ import { FaHome, FaAmbulance, FaHeart } from 'react-icons/fa';
 
 const HomeVisits = () => {
     return (
-        <ServicePageLayout title="訪問診療">
+        <ServicePageLayout title="訪問診療" subtitle="Home Visits">
             <div className="service-detail-section">
                 <h2>通院が困難な方へ</h2>
                 <p>

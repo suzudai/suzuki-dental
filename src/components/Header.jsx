@@ -44,6 +44,11 @@ const Header = () => {
         </div>
 
         <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+          {isMobileMenuOpen && (
+            <div className="close-menu" onClick={toggleMobileMenu}>
+              <FaTimes />
+            </div>
+          )}
           <ul>
             <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>ホーム</Link></li>
             <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>当院について</Link></li>

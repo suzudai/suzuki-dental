@@ -5,7 +5,7 @@ import { FaShieldAlt, FaBroom, FaCheckCircle } from 'react-icons/fa';
 
 const PreventiveDentistry = () => {
     return (
-        <ServicePageLayout title="予防歯科">
+        <ServicePageLayout title="予防歯科" subtitle="Preventive Dentistry">
             <div className="service-detail-section">
                 <h2>「痛くなる前」の受診が大切です</h2>
                 <p>

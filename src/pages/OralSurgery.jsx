@@ -6,7 +6,7 @@ import clinicCt from '../assets/images/clinic-ct.jpg';
 
 const OralSurgery = () => {
     return (
-        <ServicePageLayout title="口腔外科">
+        <ServicePageLayout title="口腔外科" subtitle="Oral Surgery">
             <div className="service-detail-section">
                 <h2>お口周りのトラブルに対応</h2>
                 <p>

@@ -5,7 +5,7 @@ import { FaSmile, FaTools, FaHandshake } from 'react-icons/fa';
 
 const Dentures = () => {
     return (
-        <ServicePageLayout title="入れ歯・義歯">
+        <ServicePageLayout title="入れ歯・義歯" subtitle="Dentures">
             <div className="service-detail-section">
                 <h2>あなたにぴったりの入れ歯を</h2>
                 <p>

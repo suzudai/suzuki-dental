@@ -5,26 +5,27 @@
 }
 
 .service-detail-section h2 {
-    font-size: 1.8rem;
-    color: var(--color-ocean-deep);
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--color-ocean-light);
+    text-align: center;
+    /* font-size removed for responsive scaling */
+    margin-bottom: 60px;
     position: relative;
+    color: var(--color-ocean-deep);
+    width: 100%;
 }
 
 .service-detail-section h2::after {
     content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 60px;
-    height: 2px;
+    display: block;
+    width: 80px;
+    height: 6px;
     background-color: var(--color-accent);
+    margin: 15px auto 0;
+    border-radius: 3px;
+    opacity: 0.7;
 }
 
 .service-detail-section h3 {
-    font-size: 1.4rem;
+    /* font-size removed for responsive scaling */
     color: var(--color-primary);
     margin-top: 30px;
     margin-bottom: 15px;
@@ -89,7 +90,7 @@
 
 .flow-step::before {
     counter-increment: flow-counter;
-    content: "STEP " counter(flow-counter);
+    content: counter(flow-counter, decimal-leading-zero);
     background: var(--color-ocean-light);
     color: var(--color-ocean-deep);
     font-weight: bold;
@@ -97,8 +98,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 100px;
-    font-size: 1.1rem;
+    min-width: 80px;
+    font-size: 1.8rem;
+    font-family: var(--font-sans);
 }
 
 .flow-content {
@@ -196,5 +198,24 @@
         width: 100%;
         padding: 10px;
         min-height: auto;
+    }
+
+    /* Heading size overrides for mobile */
+    .service-detail-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-detail-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-detail-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-detail-section h3 {
+        font-size: 1rem;
     }
 }

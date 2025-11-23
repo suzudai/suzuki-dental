@@ -5,7 +5,7 @@ import { FaTooth, FaHandHoldingHeart, FaUserMd } from 'react-icons/fa';
 
 const GeneralDentistry = () => {
     return (
-        <ServicePageLayout title="一般歯科">
+        <ServicePageLayout title="一般歯科" subtitle="General Dentistry">
             <div className="service-detail-section">
                 <h2>当院の一般歯科について</h2>
                 <p>
