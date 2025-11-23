@@ -32,15 +32,10 @@
     padding: 15px 10px;
     text-align: center;
     border: none;
-    /* Remove all borders */
-    border-radius: 15px;
-    /* Rounded corners for all cells */
     background-color: transparent;
-    /* Ensure no background square */
 }
 
 .hours-table th {
-    background-color: var(--color-ocean-light);
     color: var(--color-ocean-deep);
     font-weight: 700;
     font-size: 1.1rem;
