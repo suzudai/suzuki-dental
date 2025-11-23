@@ -34,7 +34,6 @@ const ClinicScheduleChange = ({ targetMonth }) => {
                             <th>日付</th>
                             <th>午前</th>
                             <th>午後</th>
-                            <th>備考</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,7 +48,6 @@ const ClinicScheduleChange = ({ targetMonth }) => {
                                 <td className={`time-cell ${item.afternoon === '休診' ? 'closed' : ''}`}>
                                     {item.afternoon}
                                 </td>
-                                <td className="note-cell">{item.note}</td>
                             </tr>
                         ))}
                     </tbody>

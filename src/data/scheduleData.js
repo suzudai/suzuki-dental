@@ -92,6 +92,24 @@ export const scheduleChanges = [
         note: ''
     },
     {
+        date: '2025-11-23',
+        morning: '休診',
+        afternoon: '休診',
+        note: ''
+    },
+    {
+        date: '2025-11-24',
+        morning: '休診',
+        afternoon: '休診',
+        note: '祝日（文化の日）'
+    },
+    {
+        date: '2026-01-08',
+        morning: '休診',
+        afternoon: '休診',
+        note: '祝日（成人の日）'
+    },
+    {
         date: '2025-12-30',
         morning: '9:30 ~ 12:00',
         afternoon: '休診',

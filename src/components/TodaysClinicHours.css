@@ -1,15 +1,12 @@
 .todays-hours-tape {
-    background: rgba(255, 255, 255, 0.95);
-    /* Position absolutely on top of the container */
+    background: #fffcf0;
     position: absolute;
     top: 0;
-    /* Pull it up to overlap the border */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
 
     width: 90%;
-    /* Responsive width */
     max-width: 700px;
     padding: 10px 20px;
 
@@ -49,13 +46,13 @@
 
 .tape-title {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--color-ocean-deep);
 }
 
 .tape-date {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-text);
     font-weight: 500;
 }

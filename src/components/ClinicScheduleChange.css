@@ -23,7 +23,7 @@
 .schedule-change-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 1.3rem;
 }
 
 .schedule-change-table th,
@@ -58,7 +58,7 @@
 
 @media (max-width: 768px) {
     .schedule-change-table {
-        font-size: 0.85rem;
+        font-size: 1.15rem;
     }
 
     .schedule-change-table th,

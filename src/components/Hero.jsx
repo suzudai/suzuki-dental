@@ -19,7 +19,11 @@ const Hero = () => {
             <div className="hero-content-wrapper">
                 <div className="hero-content float-anim">
                     <h1 className="hero-title">
-                        赤羽・志茂 地域に密着した 歯科医院
+                        赤羽・志茂
+                        <br />
+                        地域に密着した
+                        <br />
+                        歯科医院
                     </h1>
                     <p className="hero-subtitle">
                         鈴木歯科医院
