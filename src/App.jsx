@@ -28,7 +28,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/suzuki-dental">
       <ScrollToTop />
       <div className="app-container">
         <SeaDecorations />
