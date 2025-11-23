@@ -1,0 +1,131 @@
+.philosophy-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background decoration */
+.philosophy-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background-color: var(--color-ocean-light);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.philosophy-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.philosophy-text {
+    flex: 1;
+}
+
+.section-title-left {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    position: relative;
+    padding-left: 0;
+    border-left: none;
+    color: var(--color-ocean-deep);
+}
+
+/* Underline decoration */
+.section-title-left::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 8px;
+    background-color: var(--color-accent);
+    margin-top: 10px;
+    border-radius: 4px;
+    opacity: 0.6;
+}
+
+.philosophy-subtitle {
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.philosophy-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+.philosophy-signature {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--color-ocean-deep);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: var(--color-accent);
+    /* Pop color */
+    color: white;
+    text-decoration: none;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-image {
+    flex: 1;
+    position: relative;
+}
+
+.philosophy-image img {
+    width: 100%;
+    /* Organic shape for image */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    box-shadow: 15px 15px 0px var(--color-ocean-medium);
+    position: relative;
+    z-index: 2;
+    border: 5px solid white;
+}
+
+.image-decoration {
+    display: none;
+    /* Replaced by box-shadow */
+}
+
+@media (max-width: 768px) {
+    .philosophy-content {
+        flex-direction: column;
+    }
+
+    .section-title-left {
+        font-size: 2.2rem;
+    }
+
+    .philosophy-image {
+        width: 100%;
+        margin-top: 30px;
+    }
+}

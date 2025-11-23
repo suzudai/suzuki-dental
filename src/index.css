@@ -1,0 +1,317 @@
+:root {
+  /* Hybrid Palette: Blue/Cyan Colors + Yamatoen Layout */
+  --color-primary: #0068b7;
+  /* Ocean Deep - Main headings, primary buttons */
+  --color-secondary: #00a0e9;
+  /* Ocean Medium - Accents, secondary elements */
+  --color-accent: #f39800;
+  /* Warm Orange - Highlights */
+  --color-text: #333333;
+  /* Dark Grey - Main text */
+  --color-text-light: #ffffff;
+  --color-bg: #e0f7fa;
+  /* Light Cyan - Main background */
+  --color-surface: #ffffff;
+  /* White - Card backgrounds */
+
+  /* Legacy mappings */
+  --color-ocean-deep: var(--color-primary);
+  --color-ocean-medium: var(--color-secondary);
+  --color-ocean-light: #e1f5fe;
+  /* Very light blue */
+  --color-sand: var(--color-bg);
+
+  --font-sans: 'Zen Maru Gothic', sans-serif;
+  --font-serif: 'Zen Maru Gothic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  /* Refreshing Light Blue Background */
+  background: linear-gradient(to bottom, #e0f7fa 0%, #ffffff 100%);
+  line-height: 1.8;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Wave Divider */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-top: -1px;
+  z-index: 2;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.wave-divider .shape-fill {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+/* Inverted wave for bottom of sections */
+.wave-divider-bottom {
+  transform: rotate(0deg);
+  margin-bottom: -1px;
+}
+
+/* Layer 2 for depth */
+.wave-divider-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  transform: translateX(-20px);
+}
+
+.wave-divider-layer-2 .shape-fill {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: var(--color-ocean-deep);
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  /* Slightly narrower for cozy feel */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Organic Shape Utilities */
+.blob-shape {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-shape-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/* Hand-drawn border style */
+.hand-drawn-border {
+  border: 2px solid var(--color-ocean-medium);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+/* Wave Animation Utils - Kept but softened */
+.wave-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+/* Floating Animation (Bobbing) */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-anim-delay-1 {
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.float-anim-delay-2 {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Bubble Animation */
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    bottom: 100%;
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation: rise 8s infinite ease-in;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation: rise 5s infinite ease-in;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation: rise 10s infinite ease-in;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation: rise 12s infinite ease-in;
+  animation-delay: 0.5s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 65%;
+  animation: rise 6s infinite ease-in;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 80%;
+  animation: rise 9s infinite ease-in;
+  animation-delay: 1.5s;
+}
+
+/* Page Header Styles */
+.page-content {
+  min-height: 80vh;
+  padding-top: 120px;
+  /* Increased from 80px to prevent header overlap */
+  padding-bottom: 60px;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--color-ocean-light) 0%, #fff 100%);
+  padding: 60px 0 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  /* Increased spacing */
+  border-bottom: 2px dashed var(--color-ocean-medium);
+  border-radius: 0 0 50% 50% / 0 0 20px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: var(--color-ocean-deep);
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Global Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  position: relative;
+  color: var(--color-ocean-deep);
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 6px;
+  background-color: var(--color-accent);
+  margin: 15px auto 0;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.page-header p {
+  font-family: var(--font-sans);
+  color: var(--color-ocean-medium);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

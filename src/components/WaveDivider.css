@@ -1,0 +1,40 @@
+.wave-divider-component {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
+    /* Ensure clicks pass through */
+    margin-top: -50px;
+    /* Negative margin to overlap with previous section */
+    margin-bottom: -50px;
+    /* Negative margin to overlap with next section */
+}
+
+.wave-divider-component svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    /* Taller for more dramatic effect */
+}
+
+.wave-divider-component .shape-fill {
+    fill: #ffffff;
+}
+
+/* Variations */
+.wave-bottom {
+    transform: rotate(180deg);
+}
+
+.wave-flip {
+    transform: scaleX(-1);
+}
+
+/* Adjustments for specific placements if needed */
+.wave-divider-component.wave-bottom {
+    margin-top: -50px;
+    margin-bottom: -50px;
+}

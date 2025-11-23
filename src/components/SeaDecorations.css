@@ -1,0 +1,144 @@
+.sea-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.fish {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 2rem;
+    animation: swim linear infinite;
+}
+
+.fish-1 {
+    top: 15%;
+    left: -100px;
+    animation-duration: 25s;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.fish-2 {
+    top: 45%;
+    left: -100px;
+    animation-duration: 35s;
+    animation-delay: 5s;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.fish-3 {
+    top: 75%;
+    left: -100px;
+    animation-duration: 45s;
+    animation-delay: 2s;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.fish-4 {
+    top: 30%;
+    right: -100px;
+    animation: swim-reverse 40s linear infinite;
+    animation-delay: 10s;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(-100px) rotate(5deg);
+        left: -100px;
+    }
+
+    25% {
+        transform: translateX(25vw) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(50vw) rotate(5deg);
+    }
+
+    75% {
+        transform: translateX(75vw) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(100vw) rotate(5deg);
+        left: 100%;
+    }
+}
+
+@keyframes swim-reverse {
+    0% {
+        transform: translateX(0) rotate(-5deg) scaleX(-1);
+        right: -100px;
+    }
+
+    100% {
+        transform: translateX(-120vw) rotate(5deg) scaleX(-1);
+        right: 100%;
+    }
+}
+
+.bubble-large {
+    position: absolute;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    border-radius: 50%;
+    bottom: -100px;
+    animation: rise-wobble linear infinite;
+}
+
+.bubble-1 {
+    width: 60px;
+    height: 60px;
+    left: 10%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 40px;
+    height: 40px;
+    left: 85%;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+.bubble-3 {
+    width: 80px;
+    height: 80px;
+    left: 45%;
+    animation-duration: 20s;
+    animation-delay: 2s;
+}
+
+@keyframes rise-wobble {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        bottom: 110%;
+        transform: translateX(0);
+    }
+}

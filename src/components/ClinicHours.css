@@ -1,0 +1,112 @@
+.hours-section {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.hours-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 105, 148, 0.15);
+    position: relative;
+    /* Clean border instead of dashed */
+    border: 1px solid rgba(0, 160, 233, 0.2);
+}
+
+/* Cute tape effect - kept but refined */
+.hours-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 2px dotted #ccc;
+    border-right: 2px dotted #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    /* Spacing between cells for "bubble" look */
+    margin-bottom: 20px;
+    font-family: var(--font-sans);
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
+    /* Remove all borders */
+    border-radius: 15px;
+    /* Rounded corners for all cells */
+}
+
+.hours-table th {
+    background-color: var(--color-ocean-light);
+    color: var(--color-ocean-deep);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.time-col {
+    font-weight: 700;
+    color: var(--color-ocean-deep);
+    background-color: #f5fbfd;
+    white-space: nowrap;
+}
+
+/* Tooth Icon Styling */
+.tooth-icon {
+    color: var(--color-accent);
+    /* Orange tooth */
+    font-size: 1.4rem;
+    filter: drop-shadow(0 2px 2px rgba(243, 152, 0, 0.3));
+    vertical-align: middle;
+}
+
+.cross {
+    color: #ccc;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.hours-note {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .hours-container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .hours-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-spacing: 4px;
+    }
+
+    .hours-table th,
+    .hours-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+
+    .tooth-icon {
+        font-size: 1.2rem;
+    }
+}
