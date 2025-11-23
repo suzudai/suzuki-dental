@@ -80,24 +80,58 @@
 
 @media (max-width: 768px) {
     .hours-container {
-        padding: 20px;
+        padding: 40px 15px 20px 15px;
+        /* Increase top padding to make room for the tape */
         border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hours-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 10px;
+        /* Center the table if it fits */
+        display: flex;
+        justify-content: center;
+    }
+
+    /* If table is wider than wrapper, justify-content: center might clip the start. 
+       Safe approach: use margin: auto on table and block display on wrapper? 
+       Actually, flex with justify-content: center is fine IF we ensure safe centering.
+       But simple margin: 0 auto on table inside a block wrapper is safest. */
+
+    .hours-table-wrapper {
+        display: block;
+        text-align: center;
+        /* Helps with inline-table */
     }
 
     .hours-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        display: table;
+        /* Restore table display */
+        width: auto;
+        /* Let it size to content */
+        min-width: 100%;
+        /* Or min-width to fill if small? No, auto is better for centering */
+        margin: 0 auto;
         border-spacing: 4px;
+        white-space: nowrap;
     }
+
+    /* Remove the tbody hack */
 
     .hours-table th,
     .hours-table td {
-        padding: 10px 5px;
-        font-size: 0.9rem;
+        padding: 12px 6px;
+        font-size: 1.15rem;
+        /* Increased from 1rem */
     }
 
     .tooth-icon {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        /* Increased from 1.3rem */
     }
 }

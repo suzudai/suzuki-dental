@@ -114,4 +114,20 @@
         border-radius: 20px;
         /* Simpler shape on mobile */
     }
+
+    .access-info {
+        padding: 30px 20px;
+    }
+
+    .info-item h3 {
+        font-size: 1.15rem;
+    }
+
+    .info-item p {
+        font-size: 1rem;
+    }
+
+    .phone-number {
+        font-size: 1.6rem;
+    }
 }

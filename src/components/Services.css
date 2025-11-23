@@ -107,6 +107,7 @@
     margin-bottom: 20px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     flex: 1;
@@ -203,14 +204,19 @@
     .service-card {
         padding: 15px;
     }
-    
+
     .service-card-icon {
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
+        font-size: 2.2rem;
+        width: 55px;
+        height: 55px;
     }
+
     .service-name {
-        font-size: 1rem;
+        font-size: 1.15rem;
         margin: 0 0 15px;
+    }
+
+    .service-desc {
+        font-size: 1rem;
     }
 }

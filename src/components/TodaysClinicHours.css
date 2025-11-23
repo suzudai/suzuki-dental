@@ -117,17 +117,20 @@
 
 @media (max-width: 768px) {
     .todays-hours-tape {
-        padding: 15px 20px;
+        padding: 15px 10px;
         border-left-width: 2px;
         border-right-width: 2px;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: auto;
+        /* Make it wider */
+        width: 95%;
+        max-width: none;
     }
 
     .tape-content {
-        flex-direction: column;
+        flex-direction: row;
+        /* Keep row */
+        flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
     }
 
     .tape-divider {
@@ -135,19 +138,33 @@
     }
 
     .tape-header-group {
-        width: 100%;
+        width: auto;
+        /* Allow it to shrink/grow naturally */
         justify-content: center;
-        border-bottom: 1px dashed #eee;
-        padding-bottom: 8px;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     .tape-hours-grid {
         gap: 15px;
-        flex-direction: column;
+        flex-direction: row;
+        /* Keep row */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .tape-hours-block {
-        width: 100%;
+        width: auto;
         justify-content: center;
+    }
+
+    .tape-title {
+        font-size: 1.1rem;
+        /* Increased from 1rem */
+    }
+
+    .tape-date {
+        font-size: 1.1rem;
+        /* Increased from 1rem */
     }
 }

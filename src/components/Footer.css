@@ -104,7 +104,7 @@
     }
 
     .footer-info p {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-bottom: 5px;
     }
 
@@ -117,6 +117,10 @@
     }
 
     .footer-links a {
+        font-size: 0.95rem;
+    }
+
+    .copyright {
         font-size: 0.85rem;
     }
 }

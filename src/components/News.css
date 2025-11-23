@@ -96,6 +96,10 @@
 
     .news-date {
         margin-bottom: 10px;
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+    }
+
+    .news-title {
+        font-size: 1.05rem;
     }
 }

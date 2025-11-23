@@ -44,19 +44,20 @@ body {
 
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
-    /* Slightly smaller base font */
+    font-size: 100%;
+    /* Keep base font size for better readability */
   }
 
   body {
-    line-height: 1.6;
-    /* Tighter line height for mobile */
+    line-height: 1.7;
+    /* Slightly more spacious line height for mobile */
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 75%;
+    font-size: 95%;
+    /* Slightly smaller for very small screens, but still readable */
   }
 }
 
