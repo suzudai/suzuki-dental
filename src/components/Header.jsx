@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-import logoImage from '/images/logo_horizontal.png';
+import logoImage from '../assets/images/logo_horizontal.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
