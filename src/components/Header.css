@@ -27,7 +27,7 @@
     max-width: 1100px;
     /* Match global container max-width */
     margin: 0 auto;
-    height: 70px;
+    height: 85px;
     /* Explicit height to control layout */
 }
 
@@ -53,6 +53,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    padding: 8px 0;
 }
 
 .header.scrolled .logo-image {
@@ -95,6 +96,13 @@
 .nav-menu a:hover {
     background-color: var(--color-secondary);
     color: white;
+}
+
+/* Active menu item styling */
+.nav-menu a.active {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
 }
 
 /* Removed underline, added pill shape hover */
