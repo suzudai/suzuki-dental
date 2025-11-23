@@ -26,8 +26,8 @@
 /* Grid Layout */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 0 20px;
 }
 
@@ -35,7 +35,7 @@
 .service-card {
     background: #ffffff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     display: flex;
@@ -56,13 +56,13 @@
 }
 
 .service-card-icon {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--color-primary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
     background: #f0f8ff;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,9 +94,9 @@
 }
 
 .service-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-ocean-deep);
-    margin: 0 0 15px;
+    margin: 0 0 20px;
     font-weight: 700;
 }
 
@@ -195,11 +195,22 @@
 
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
         padding: 0 15px;
     }
 
     .service-card {
-        padding: 25px;
+        padding: 15px;
+    }
+    
+    .service-card-icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+    .service-name {
+        font-size: 1rem;
+        margin: 0 0 15px;
     }
 }

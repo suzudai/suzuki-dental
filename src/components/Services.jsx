@@ -91,7 +91,6 @@ const Services = ({ showTitle = true }) => {
                                 <div className="service-card-content">
                                     <span className="service-subtitle">{service.subtitle}</span>
                                     <h3 className="service-name">{service.title}</h3>
-                                    <p className="service-desc">{service.description}</p>
                                     <div className="service-card-footer">
                                         <span className="service-link-text">詳しく見る <span className="arrow">→</span></span>
                                     </div>

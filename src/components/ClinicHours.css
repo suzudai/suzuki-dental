@@ -16,21 +16,7 @@
     border: 1px solid rgba(0, 160, 233, 0.2);
 }
 
-/* Cute tape effect - kept but refined */
-.hours-container::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-left: 2px dotted #ccc;
-    border-right: 2px dotted #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    z-index: 1;
-}
+/* Cute tape effect removed - replaced by TodaysClinicHours component */
 
 .hours-table {
     width: 100%;
@@ -49,6 +35,8 @@
     /* Remove all borders */
     border-radius: 15px;
     /* Rounded corners for all cells */
+    background-color: transparent;
+    /* Ensure no background square */
 }
 
 .hours-table th {
@@ -61,16 +49,19 @@
 .time-col {
     font-weight: 700;
     color: var(--color-ocean-deep);
-    background-color: #f5fbfd;
+    /* background-color: #f5fbfd; Remove background if "no squares" applies to all, or keep if only for data cells. 
+       User said "each cell", so let's make it transparent or very subtle. 
+       I'll keep it transparent for now to be safe with "no squares". */
+    background-color: transparent;
     white-space: nowrap;
 }
 
 /* Tooth Icon Styling */
 .tooth-icon {
-    color: var(--color-accent);
-    /* Orange tooth */
+    color: var(--color-primary);
+    /* Blue tooth */
     font-size: 1.4rem;
-    filter: drop-shadow(0 2px 2px rgba(243, 152, 0, 0.3));
+    filter: drop-shadow(0 2px 2px rgba(0, 104, 183, 0.3));
     vertical-align: middle;
 }
 

@@ -42,6 +42,24 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+    /* Slightly smaller base font */
+  }
+
+  body {
+    line-height: 1.6;
+    /* Tighter line height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 /* Wave Divider */
 .wave-divider {
   position: relative;
@@ -57,7 +75,8 @@ body {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 100px;
+  height: 60px;
+  /* Reduced height for mobile optimization */
 }
 
 .wave-divider .shape-fill {
@@ -114,6 +133,33 @@ ul {
   padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    /* Reduced padding on mobile */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    /* Smaller section titles */
+    margin-bottom: 30px;
+  }
+
+  .section-title::after {
+    margin-top: 10px;
+    width: 50px;
+  }
+
+  .page-header {
+    padding: 40px 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
 /* Organic Shape Utilities */
 .blob-shape {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -127,6 +173,15 @@ ul {
 .hand-drawn-border {
   border: 2px solid var(--color-ocean-medium);
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+@media (max-width: 768px) {
+  .hand-drawn-border {
+    border-width: 1px;
+    /* Thinner border on mobile */
+    border-radius: 20px;
+    /* Simpler radius on mobile */
+  }
 }
 
 /* Wave Animation Utils - Kept but softened */

@@ -10,7 +10,6 @@ const Access = ({ showTitle = true }) => {
             <div className="container">
                 {showTitle && <h2 className="section-title fade-in-up">アクセス</h2>}
 
-
                 <div className="access-image-container fade-in-up">
                     <img src={clinicExterior} alt="鈴木歯科医院 外観" className="access-exterior-image" />
                 </div>

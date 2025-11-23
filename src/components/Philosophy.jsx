@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Philosophy.css';
 import directorImage from '../assets/images/director.jpg';
 
@@ -8,7 +9,7 @@ const Philosophy = () => {
             <div className="container">
                 <div className="philosophy-content">
                     <div className="philosophy-text fade-in-up">
-                        <h2 className="section-title-left">患者様に寄り添う<br />歯科治療を</h2>
+                        <h2 className="section-title">患者様に寄り添う<br />歯科治療を</h2>
                         <h3 className="philosophy-subtitle">一人ひとりの患者さんに<br />時間をかけてカウンセリング</h3>
                         <p>
                             ここ「北区赤羽」という地域で、小さなお子さんから高齢の患者さんまで幅広くお付き合いできるようなホームドクター的な歯科医院を目指して日々診療に励んでおります。
@@ -20,7 +21,7 @@ const Philosophy = () => {
                             <p>SUZUKI DENTAL CLINIC</p>
                             <p>院長　鈴木英也</p>
                         </div>
-                        <a href="#" className="btn-primary">スタッフ紹介</a>
+                        <Link to="/staff" className="btn-primary">スタッフ紹介</Link>
                     </div>
                     <div className="philosophy-image fade-in-up delay-2">
                         <img src={directorImage} alt="院長 鈴木英也" />

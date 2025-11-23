@@ -17,6 +17,7 @@ const Footer = () => {
                         <li><Link to="/">ホーム</Link></li>
                         <li><Link to="/about">当院について</Link></li>
                         <li><Link to="/services">診療案内</Link></li>
+                        <li><Link to="/staff">スタッフ紹介</Link></li>
                         <li><Link to="/access">アクセス</Link></li>
                     </ul>
                 </div>

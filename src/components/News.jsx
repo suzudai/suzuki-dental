@@ -10,7 +10,7 @@ const News = () => {
     return (
         <section id="news" className="news-section">
             <div className="container">
-                <h2 className="section-title fade-in-up">診療時間のお知らせ</h2>
+                <h2 className="section-title fade-in-up">お知らせ</h2>
                 <div className="news-list">
                     {latestNews.map((item, index) => (
                         <article key={item.id} className="news-item fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -22,7 +22,7 @@ const News = () => {
                     ))}
                 </div>
                 <div className="news-more">
-                    <a href="#" className="btn-outline">お知らせ一覧</a>
+                    <Link to="/news" className="btn-outline">お知らせ一覧</Link>
                 </div>
             </div>
         </section>

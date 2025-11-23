@@ -1,0 +1,153 @@
+.todays-hours-tape {
+    background: rgba(255, 255, 255, 0.95);
+    /* Position absolutely on top of the container */
+    position: absolute;
+    top: 0;
+    /* Pull it up to overlap the border */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    width: 90%;
+    /* Responsive width */
+    max-width: 700px;
+    padding: 10px 20px;
+
+    /* Tape Style */
+    border-left: 3px dotted #ccc;
+    border-right: 3px dotted #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.todays-hours-tape.changed {
+    background: #fffcf0;
+    /* Very light yellow/orange for changed status */
+    border-left-color: var(--color-accent);
+    border-right-color: var(--color-accent);
+}
+
+.tape-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tape-header-group {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.tape-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-ocean-deep);
+}
+
+.tape-date {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.tape-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #ddd;
+    display: block;
+}
+
+.tape-times-group {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tape-hours-grid {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.tape-hours-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tape-label {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 700;
+    background: #f0f8ff;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.tape-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+}
+
+.tape-closed-message {
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+.tape-changed-notice {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .todays-hours-tape {
+        padding: 15px 20px;
+        border-left-width: 2px;
+        border-right-width: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+    }
+
+    .tape-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tape-divider {
+        display: none;
+    }
+
+    .tape-header-group {
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px dashed #eee;
+        padding-bottom: 8px;
+    }
+
+    .tape-hours-grid {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .tape-hours-block {
+        width: 100%;
+        justify-content: center;
+    }
+}

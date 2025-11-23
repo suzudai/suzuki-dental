@@ -48,6 +48,7 @@ const Header = () => {
             <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>ホーム</Link></li>
             <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>当院について</Link></li>
             <li><Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>診療案内</Link></li>
+            <li><Link to="/staff" onClick={() => setIsMobileMenuOpen(false)}>スタッフ紹介</Link></li>
             <li><Link to="/news" onClick={() => setIsMobileMenuOpen(false)}>お知らせ</Link></li>
             <li><Link to="/access" onClick={() => setIsMobileMenuOpen(false)}>アクセス</Link></li>
           </ul>

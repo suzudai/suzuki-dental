@@ -1,6 +1,9 @@
 import React from 'react';
 import './Hero.css';
 
+import treatmentRoom from '../assets/images/clinic-treatment-room.jpg';
+import waitingRoom from '../assets/images/clinic-waiting.jpg';
+
 const Hero = () => {
     return (
         <section id="home" className="hero">
@@ -13,15 +16,17 @@ const Hero = () => {
                 <div className="bubble"></div>
             </div>
 
-            <div className="hero-content float-anim">
-                <h1 className="hero-title">
-                    海のような<br />
-                    安らぎを、<br />
-                    あなたに。
-                </h1>
-                <p className="hero-subtitle">
-                    鈴木歯科医院
-                </p>
+            <div className="hero-content-wrapper">
+                <div className="hero-content float-anim">
+                    <h1 className="hero-title">
+                        赤羽・志茂<br />
+                        地域に密着した<br />
+                        歯科医院
+                    </h1>
+                    <p className="hero-subtitle">
+                        鈴木歯科医院
+                    </p>
+                </div>
             </div>
 
             <div className="hero-waves">

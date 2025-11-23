@@ -8,6 +8,7 @@ import AboutPage from './pages/About';
 import ServicesPage from './pages/Services';
 import NewsPage from './pages/News';
 import AccessPage from './pages/Access';
+import StaffPage from './pages/Staff';
 import AccessComponent from './components/Access';
 import SeaDecorations from './components/SeaDecorations';
 import Hero from './components/Hero';
@@ -28,22 +29,13 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/suzuki-dental">
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="app-container">
         <SeaDecorations />
         <Header />
         <Routes>
-          <Route path="/" element={
-            <main>
-              <Hero />
-              <NewsSection />
-              <Philosophy />
-              <ServicesSection />
-              <ClinicHours />
-              <AccessComponent />
-            </main>
-          } />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/general" element={<GeneralDentistry />} />
@@ -55,6 +47,7 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="/access" element={<AccessPage />} />
+          <Route path="/staff" element={<StaffPage />} />
         </Routes>
         <Footer />
       </div>

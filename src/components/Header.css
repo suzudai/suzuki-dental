@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 5px 0;
     transition: all 0.3s ease;
     background-color: transparent;
     color: var(--color-text);
@@ -14,7 +14,7 @@
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     /* Softer shadow */
-    padding: 5px 0;
+    padding: 2px 0;
     color: var(--color-primary);
 }
 
@@ -30,7 +30,8 @@
 }
 
 .logo {
-    height: 65px;
+    height: 35px;
+    /* Reduced from 45px */
     display: flex;
     align-items: center;
 }
@@ -49,7 +50,8 @@
 }
 
 .logo h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    /* Reduced from 1.6rem */
     margin: 0;
     line-height: 1;
     color: inherit;

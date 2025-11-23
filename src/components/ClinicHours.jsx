@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTooth } from 'react-icons/fa';
+import TodaysClinicHours from './TodaysClinicHours';
 import './ClinicHours.css';
 
 const ClinicHours = () => {
@@ -8,6 +9,7 @@ const ClinicHours = () => {
             <div className="container">
                 <h2 className="section-title fade-in-up">診療時間</h2>
                 <div className="hours-container fade-in-up">
+                    <TodaysClinicHours />
                     <table className="hours-table">
                         <thead>
                             <tr>
