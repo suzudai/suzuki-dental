@@ -114,19 +114,17 @@
 
 @media (max-width: 768px) {
     .todays-hours-tape {
-        padding: 15px 10px;
+        padding: 8px 15px;
         border-left-width: 2px;
         border-right-width: 2px;
-        /* Make it wider */
         width: 95%;
         max-width: none;
     }
 
     .tape-content {
         flex-direction: row;
-        /* Keep row */
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
     }
 
@@ -136,16 +134,15 @@
 
     .tape-header-group {
         width: auto;
-        /* Allow it to shrink/grow naturally */
         justify-content: center;
         border-bottom: none;
         padding-bottom: 0;
+        gap: 10px;
     }
 
     .tape-hours-grid {
-        gap: 15px;
+        gap: 10px;
         flex-direction: row;
-        /* Keep row */
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -153,15 +150,27 @@
     .tape-hours-block {
         width: auto;
         justify-content: center;
+        gap: 6px;
     }
 
     .tape-title {
-        font-size: 1.1rem;
-        /* Increased from 1rem */
+        font-size: 0.85rem;
     }
 
     .tape-date {
-        font-size: 1.1rem;
-        /* Increased from 1rem */
+        font-size: 0.8rem;
+    }
+
+    .tape-time {
+        font-size: 0.7rem;
+    }
+
+    .tape-label {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+    }
+
+    .tape-closed-message {
+        font-size: 0.85rem;
     }
 }
