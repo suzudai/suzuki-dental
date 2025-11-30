@@ -81,6 +81,9 @@
 .hero-logo-wrapper {
     margin-bottom: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align tape and logo */
     justify-content: flex-start;
 }
 
@@ -218,8 +221,7 @@
 .hero-hours-table .time-col {
     font-weight: bold;
     color: var(--color-text);
-    text-align: left;
-    padding-left: 10px;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -412,6 +414,10 @@
         margin-top: 30px;
         margin-bottom: 60px;
         /* Add more bottom margin to keep distance from waves */
+    }
+
+    .desktop-tape-wrapper {
+        display: none;
     }
 
     .hero-logo {

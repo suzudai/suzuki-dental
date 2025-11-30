@@ -1,14 +1,19 @@
 .todays-hours-tape {
     background: #fffcf0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* Position relative to parent now */
+    position: relative;
+    margin-bottom: 20px;
     z-index: 10;
 
     width: 90%;
-    max-width: 700px;
-    padding: 10px 20px;
+    max-width: 800px;
+    /* Increased from 500px for desktop */
+    width: fit-content;
+    /* Allow it to shrink to content */
+    min-width: 300px;
+    /* Minimum width */
+    padding: 8px 40px;
+    /* More horizontal padding */
 
     /* Tape Style */
     border-left: 3px dotted #ccc;
@@ -20,6 +25,10 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
+    transform: none;
+    /* Reset transform */
+    left: auto;
+    top: auto;
 }
 
 .todays-hours-tape.changed {

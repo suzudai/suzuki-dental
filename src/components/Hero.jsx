@@ -2,6 +2,7 @@ import React from 'react';
 import './Hero.css';
 import logoImage from '../assets/images/logo_horizontal.png';
 import { FaTooth } from 'react-icons/fa';
+import TodaysClinicHours from './TodaysClinicHours';
 
 const Hero = () => {
     return (
@@ -74,6 +75,9 @@ const Hero = () => {
             </div>
 
             <div className="hero-logo-wrapper fade-in-up-delayed">
+                <div className="desktop-tape-wrapper">
+                    <TodaysClinicHours />
+                </div>
                 <img src={logoImage} alt="鈴木歯科医院" className="hero-logo" />
             </div>
 

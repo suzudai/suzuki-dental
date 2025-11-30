@@ -17,6 +17,12 @@
 }
 
 /* Cute tape effect removed - replaced by TodaysClinicHours component */
+.mobile-tape-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .hours-table {
     width: 100%;

@@ -9,7 +9,9 @@ const ClinicHours = () => {
             <div className="container">
                 <h2 className="section-title fade-in-up">診療時間</h2>
                 <div className="hours-container fade-in-up">
-                    <TodaysClinicHours />
+                    <div className="mobile-tape-wrapper">
+                        <TodaysClinicHours />
+                    </div>
                     <div className="hours-table-wrapper">
                         <table className="hours-table">
                             <thead>
