@@ -21,7 +21,7 @@ const Hero = () => {
                     <h1 className="hero-main-copy">
                         地域の皆様に<br />
                         <span className="text-accent">寄り添う</span><br />
-                        安心の歯科医療。
+                        安心の歯科医療
                     </h1>
                     <p className="hero-sub-copy">
                         <span className="location-badge">赤羽・志茂</span>
@@ -70,7 +70,7 @@ const Hero = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <p className="hero-hours-note">※ 土曜午後は14:30~17:00まで</p>
+                        <p className="hero-hours-note">※ 受付は診療終了の30分前までとなります。</p>
                     </div>
                 </div>
             </div>
