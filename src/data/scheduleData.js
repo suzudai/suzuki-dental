@@ -5,7 +5,7 @@ export const standardHours = {
     },
     saturday: {
         morning: '9:30 ~ 13:00',
-        afternoon: '14:30 ~ 19:00'
+        afternoon: '休診'
     },
     sunday: {
         morning: '休診',
