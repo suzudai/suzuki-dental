@@ -31,6 +31,7 @@ const Hero = () => {
                 <div className="hero-visual-area">
                     <div className="hero-hours-card fade-in-up-delayed">
                         <h3 className="hero-hours-title">診療時間</h3>
+                        <TodaysClinicHours />
                         <div className="hero-hours-table-wrapper">
                             <table className="hero-hours-table">
                                 <thead>
@@ -75,9 +76,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-logo-wrapper fade-in-up-delayed">
-                <div className="desktop-tape-wrapper">
-                    <TodaysClinicHours />
-                </div>
+
                 <img src={logoImage} alt="鈴木歯科医院" className="hero-logo" />
             </div>
 

@@ -4,31 +4,31 @@ import './TodaysClinicHours.css';
 
 const TodaysClinicHours = () => {
     const today = new Date();
+    // const today = new Date('2025-12-01T10:00:00'); // Mocking Monday for verification
     const { morningHours, afternoonHours, status, formattedMorning, formattedAfternoon } = calculateClinicHours(today);
 
     return (
-        <div className={`todays-hours-tape ${status}`}>
-            <div className="tape-content">
-                <div className="tape-header-group">
-                    <h3 className="tape-title">本日の診療時間</h3>
-                    <span className="tape-date">{today.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric', weekday: 'short' })}</span>
+        <div className={`todays-hours-card ${status}`}>
+            <div className="card-row">
+                <div className="card-left">
+                    <span className="card-title">本日の診療時間</span>
+                    <span className="card-date">{today.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric', weekday: 'short' })}</span>
                 </div>
 
-                <div className="tape-divider"></div>
-
-                <div className="tape-times-group">
+                <div className="card-right">
                     {status === 'closed' ? (
-                        <div className="tape-closed-message">本日は休診日です</div>
+                        <div className="card-closed-message">本日は休診日です</div>
                     ) : (
-                        <div className="tape-hours-grid">
-                            <div className="tape-hours-block">
-                                <span className="tape-label">午前</span>
-                                <span className="tape-time">{formattedMorning}</span>
-                            </div>
-                            <div className="tape-hours-block">
-                                <span className="tape-label">午後</span>
-                                <span className="tape-time">{formattedAfternoon}</span>
-                            </div>
+                        <div className="card-hours-inline">
+                            <span className="card-time-group">
+                                <span className="card-label-mini">午前</span>
+                                <span className="card-time">{formattedMorning}</span>
+                            </span>
+                            <span className="card-divider-dot"></span>
+                            <span className="card-time-group">
+                                <span className="card-label-mini">午後</span>
+                                <span className="card-time">{formattedAfternoon}</span>
+                            </span>
                         </div>
                     )}
                 </div>

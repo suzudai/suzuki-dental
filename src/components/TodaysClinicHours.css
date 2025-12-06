@@ -1,185 +1,240 @@
-.todays-hours-tape {
-    background: #fffcf0;
-    /* Position relative to parent now */
-    position: relative;
-    margin-bottom: 20px;
-    z-index: 10;
-
-    width: 90%;
-    max-width: 800px;
-    /* Increased from 500px for desktop */
+.todays-hours-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 104, 183, 0.1);
+    border: 1px solid rgba(0, 104, 183, 0.1);
+    padding: 15px 25px;
     width: fit-content;
-    /* Allow it to shrink to content */
-    min-width: 300px;
-    /* Minimum width */
-    padding: 8px 40px;
-    /* More horizontal padding */
-
-    /* Tape Style */
-    border-left: 3px dotted #ccc;
-    border-right: 3px dotted #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-
+    min-width: 320px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
-    transform: none;
-    /* Reset transform */
-    left: auto;
-    top: auto;
+    gap: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.todays-hours-tape.changed {
-    background: #fffcf0;
-    /* Very light yellow/orange for changed status */
-    border-left-color: var(--color-accent);
-    border-right-color: var(--color-accent);
-}
-
-.tape-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Integration styles when inside Hero card */
+/* Integration styles when inside Hero card OR mobile tape wrapper */
+.hero-hours-card .todays-hours-card,
+.mobile-tape-wrapper .todays-hours-card {
+    background: linear-gradient(135deg, #fffcf0 0%, #fff8e1 100%);
+    box-shadow: 0 4px 15px rgba(243, 152, 0, 0.15);
+    border: 2px solid var(--color-accent);
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 10px 25px;
+    margin-bottom: 20px;
     width: 100%;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.tape-header-group {
-    display: flex;
-    align-items: baseline;
-    gap: 15px;
-}
-
-.tape-title {
-    margin: 0;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--color-ocean-deep);
-}
-
-.tape-date {
-    font-size: 0.9rem;
-    color: var(--color-text);
-    font-weight: 500;
-}
-
-.tape-divider {
-    width: 1px;
-    height: 30px;
-    background-color: #ddd;
-    display: block;
-}
-
-.tape-times-group {
-    flex: 1;
+    min-width: auto;
+    transform: scale(1.02);
     display: flex;
     justify-content: center;
-}
-
-.tape-hours-grid {
-    display: flex;
-    gap: 30px;
     align-items: center;
 }
 
-.tape-hours-block {
+.hero-hours-card .todays-hours-card:hover,
+.mobile-tape-wrapper .todays-hours-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(243, 152, 0, 0.25);
+}
+
+.card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    /* Separator line */
+    margin-right: 10px;
+}
+
+.hero-hours-card .card-title,
+.mobile-tape-wrapper .card-title {
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.hero-hours-card .card-date,
+.mobile-tape-wrapper .card-date {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center alignment instead of flex-end */
+    flex: 1;
+    padding-left: 10px;
+}
+
+.card-hours-inline {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.tape-label {
-    font-size: 0.85rem;
-    color: #888;
+.card-time-group {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.card-label-mini {
+    font-size: 0.75rem;
     font-weight: 700;
-    background: #f0f8ff;
+    color: var(--color-primary);
+    background: rgba(0, 160, 233, 0.1);
     padding: 2px 8px;
     border-radius: 10px;
 }
 
-.tape-time {
-    font-size: 0.8rem;
+.hero-hours-card .card-time,
+.mobile-tape-wrapper .card-time {
+    font-size: 1.1rem;
+    color: var(--color-ocean-deep);
     font-weight: 700;
-    color: var(--color-text);
-    font-family: var(--font-sans);
+    letter-spacing: 0.02em;
 }
 
-.tape-closed-message {
-    font-weight: 700;
+.card-divider-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.hero-hours-card .card-closed-message,
+.mobile-tape-wrapper .card-closed-message {
+    font-weight: 800;
     color: #ff6b6b;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.tape-changed-notice {
+.hero-hours-card .card-closed-message::before,
+.mobile-tape-wrapper .card-closed-message::before {
+    content: '●';
     font-size: 0.8rem;
-    color: var(--color-accent);
-    font-weight: 700;
-    margin-top: 5px;
-    width: 100%;
-    text-align: center;
+    color: #ff6b6b;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
-    .todays-hours-tape {
-        padding: 8px 15px;
-        border-left-width: 2px;
-        border-right-width: 2px;
-        width: 95%;
-        max-width: none;
-    }
-
-    .tape-content {
+    .card-row {
         flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
+        /* Keep row layout */
+        gap: 5px;
+        /* Reduce gap */
+        text-align: left;
     }
 
-    .tape-divider {
-        display: none;
+    .hero-hours-card .todays-hours-card,
+    .mobile-tape-wrapper .todays-hours-card {
+        padding: 8px 12px;
+        /* Compact padding */
+        border-radius: 50px;
+        /* Keep pill shape */
     }
 
-    .tape-header-group {
-        width: auto;
-        justify-content: center;
-        border-bottom: none;
-        padding-bottom: 0;
+    .card-left {
+        padding-right: 8px;
+        margin-right: 5px;
+    }
+
+    .hero-hours-card .card-title,
+    .mobile-tape-wrapper .card-title {
+        font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+        /* Variable size */
+    }
+
+    .hero-hours-card .card-date,
+    .mobile-tape-wrapper .card-date {
+        font-size: clamp(0.75rem, 3vw, 0.9rem);
+        /* Variable size */
+    }
+
+    .hero-hours-card .card-time,
+    .mobile-tape-wrapper .card-time {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        /* Variable size */
+    }
+
+    .card-label-mini {
+        font-size: clamp(0.6rem, 2vw, 0.7rem);
+        padding: 1px 5px;
+    }
+
+    .hero-hours-card .card-closed-message,
+    .mobile-tape-wrapper .card-closed-message {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .todays-hours-card {
+        padding: 12px 20px;
+        min-width: auto;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .card-header {
         gap: 10px;
     }
 
-    .tape-hours-grid {
-        gap: 10px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    .card-title {
+        font-size: 0.9rem;
     }
 
-    .tape-hours-block {
-        width: auto;
-        justify-content: center;
-        gap: 6px;
-    }
-
-    .tape-title {
+    .card-date {
         font-size: 0.85rem;
     }
 
-    .tape-date {
-        font-size: 0.8rem;
+    .card-hours-grid {
+        gap: 15px;
     }
 
-    .tape-time {
-        font-size: 0.7rem;
-    }
-
-    .tape-label {
-        font-size: 0.75rem;
-        padding: 2px 6px;
-    }
-
-    .tape-closed-message {
+    .card-time {
         font-size: 0.85rem;
     }
 }
