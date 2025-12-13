@@ -273,14 +273,14 @@
     .time-start,
     .time-sep,
     .time-end {
-        font-size: 0.95rem;
-        /* Slightly smaller */
+        font-size: 1.05rem;
+        /* Increased for better readability */
     }
 
     .card-label-mini {
-        font-size: 0.65rem;
-        /* Smaller label */
-        padding: 1px 6px;
+        font-size: 0.75rem;
+        /* Larger label */
+        padding: 2px 7px;
     }
 
     .card-time-group {

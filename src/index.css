@@ -56,8 +56,8 @@ body {
 
 @media (max-width: 480px) {
   html {
-    font-size: 95%;
-    /* Slightly smaller for very small screens, but still readable */
+    font-size: 100%;
+    /* slightly reduced from default if needed, but 100% is better for readability requested */
   }
 }
 
@@ -172,11 +172,9 @@ ul {
   }
 }
 
-@media (max-width: 480px) {
-  html {
-    font-size: 90%;
-  }
 
+
+@media (max-width: 480px) {
   .page-header h1 {
     font-size: 1.1rem;
   }
