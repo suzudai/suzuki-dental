@@ -24,15 +24,18 @@
     box-shadow: 0 4px 15px rgba(243, 152, 0, 0.15);
     border: 2px solid var(--color-accent);
     border-radius: 50px;
-    /* Pill shape */
-    padding: 6px 12px;
+    padding: 6px 20px;
     margin-bottom: 20px;
-    width: 100%;
-    min-width: auto;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     transform: scale(1.02);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 .hero-hours-card .todays-hours-card:hover,
@@ -41,25 +44,16 @@
     box-shadow: 0 6px 20px rgba(243, 152, 0, 0.25);
 }
 
-.card-row {
+/* Line 1: Header (Title + Date) */
+.card-header-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    gap: 8px;
-}
-
-.card-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1px;
-    padding-right: 8px;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    /* Separator line */
-    margin-right: 4px;
-    flex-shrink: 0;
-    /* Prevent shrinking */
+    border-bottom: 1px dashed rgba(243, 152, 0, 0.3);
+    padding-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 .hero-hours-card .card-title,
@@ -81,23 +75,26 @@
     line-height: 1.2;
 }
 
-.card-right {
+.card-weekday {
+    font-size: 0.85em;
+    margin-left: 2px;
+}
+
+/* Line 2: Hours */
+.card-hours-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center alignment instead of flex-end */
-    flex: 1;
-    padding-left: 10px;
+    width: 100%;
 }
 
 .card-hours-inline {
     display: flex;
-    flex-direction: column;
-    /* Force 2 lines as requested */
-    align-items: flex-start;
-    /* Align text to the left */
-    gap: 4px;
-    /* Space between Morning and Afternoon */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 
