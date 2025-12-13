@@ -24,7 +24,7 @@
     box-shadow: 0 4px 15px rgba(243, 152, 0, 0.15);
     border: 2px solid var(--color-accent);
     border-radius: 50px;
-    padding: 6px 20px;
+    padding: 10px 25px;
     margin-bottom: 20px;
     width: fit-content;
     max-width: 100%;
@@ -215,7 +215,7 @@
 
     .hero-hours-card .todays-hours-card,
     .mobile-tape-wrapper .todays-hours-card {
-        padding: 8px 12px;
+        padding: 12px 20px;
         border-radius: 30px;
     }
 
@@ -231,7 +231,7 @@
     .time-sep,
     .hero-hours-card .card-closed-message,
     .mobile-tape-wrapper .card-closed-message {
-        font-size: 1rem;
+        font-size: 1.1rem;
         /* Consistent size for all */
     }
 
@@ -257,7 +257,7 @@
     .time-start,
     .time-sep,
     .time-end {
-        font-size: 1rem;
+        font-size: 1.1rem;
         /* Maintain consistency */
     }
 
