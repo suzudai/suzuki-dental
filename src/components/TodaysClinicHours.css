@@ -56,23 +56,35 @@
     margin-bottom: 2px;
 }
 
+/* Standardized Font Sizes */
+.hero-hours-card .card-title,
+.mobile-tape-wrapper .card-title,
+.hero-hours-card .card-date,
+.mobile-tape-wrapper .card-date,
+.time-start,
+.time-end,
+.hero-hours-card .card-time,
+.mobile-tape-wrapper .card-time,
+.time-sep,
+.hero-hours-card .card-closed-message,
+.mobile-tape-wrapper .card-closed-message {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
 .hero-hours-card .card-title,
 .mobile-tape-wrapper .card-title {
-    font-size: 0.85rem;
     color: var(--color-accent);
     font-weight: 700;
     margin: 0;
     white-space: nowrap;
-    line-height: 1.2;
 }
 
 .hero-hours-card .card-date,
 .mobile-tape-wrapper .card-date {
-    font-size: 1.1rem;
     font-weight: 800;
     color: var(--color-text);
     white-space: nowrap;
-    line-height: 1.2;
 }
 
 .card-weekday {
@@ -119,7 +131,6 @@
 .time-end,
 .hero-hours-card .card-time,
 .mobile-tape-wrapper .card-time {
-    font-size: 1.1rem;
     color: var(--color-ocean-deep);
     font-weight: 700;
     white-space: nowrap;
@@ -140,7 +151,6 @@
 .time-sep {
     text-align: center;
     margin: 0 6px;
-    font-size: 1.1rem;
     color: var(--color-ocean-deep);
     font-weight: 700;
 }
@@ -165,7 +175,6 @@
 .mobile-tape-wrapper .card-closed-message {
     font-weight: 800;
     color: #ff6b6b;
-    font-size: 1.1rem;
     letter-spacing: 0.05em;
     display: flex;
     align-items: center;
@@ -204,84 +213,60 @@
         max-width: 400px;
     }
 
-    .card-row {
-        gap: 10px;
-    }
-
     .hero-hours-card .todays-hours-card,
     .mobile-tape-wrapper .todays-hours-card {
         padding: 8px 12px;
+        border-radius: 30px;
     }
 
-    .card-left {
-        padding-right: 8px;
-        margin-right: 5px;
-    }
-
+    /* Standardized Mobile Font Sizes */
     .hero-hours-card .card-title,
-    .mobile-tape-wrapper .card-title {
-        font-size: clamp(0.6rem, 2.5vw, 0.75rem);
-    }
-
+    .mobile-tape-wrapper .card-title,
     .hero-hours-card .card-date,
-    .mobile-tape-wrapper .card-date {
-        font-size: clamp(0.75rem, 3vw, 0.9rem);
-    }
-
+    .mobile-tape-wrapper .card-date,
     .hero-hours-card .card-time,
-    .mobile-tape-wrapper .card-time {
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
+    .mobile-tape-wrapper .card-time,
+    .time-start,
+    .time-end,
+    .time-sep,
+    .hero-hours-card .card-closed-message,
+    .mobile-tape-wrapper .card-closed-message {
+        font-size: 1rem;
+        /* Consistent size for all */
     }
 
     .card-label-mini {
-        font-size: clamp(0.6rem, 2vw, 0.7rem);
+        font-size: 0.7rem;
         padding: 1px 5px;
     }
 
-    .hero-hours-card .card-closed-message,
-    .mobile-tape-wrapper .card-closed-message {
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
-    }
-}
-
-/* Stack Layout Trigger (Tablet & Mobile) - increased from 500px to 768px to prevent overflow */
-/* Stack Layout Trigger (Tablet & Mobile) - increased from 500px to 768px to prevent overflow */
-@media (max-width: 768px) {
-
-    .hero-hours-card .todays-hours-card,
-    .mobile-tape-wrapper .todays-hours-card {
-        border-radius: 30px;
-        padding: 8px 15px;
-    }
-
     .card-time-group {
-        display: flex;
-        align-items: center;
         height: 24px;
-        /* Fix height to ensure consistent spacing */
     }
 }
 
 /* Typography refinements specifically for small mobile screens */
 @media (max-width: 500px) {
 
+    .hero-hours-card .card-title,
+    .mobile-tape-wrapper .card-title,
+    .hero-hours-card .card-date,
+    .mobile-tape-wrapper .card-date,
     .hero-hours-card .card-time,
     .mobile-tape-wrapper .card-time,
     .time-start,
     .time-sep,
     .time-end {
-        font-size: 1.05rem;
-        /* Increased for better readability */
+        font-size: 1rem;
+        /* Maintain consistency */
     }
 
     .card-label-mini {
         font-size: 0.75rem;
-        /* Larger label */
         padding: 2px 7px;
     }
 
     .card-time-group {
         gap: 6px;
-        /* Adjust gap between label and time */
     }
 }
